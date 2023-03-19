@@ -19,10 +19,12 @@
     <None Remove="Data\" />
     <None Remove="Views\Reference\" />
     <None Remove="Helpers\" />
+    <None Remove="Views\Search\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
     <Folder Include="Views\Reference\" />
     <Folder Include="Helpers\" />
+    <Folder Include="Views\Search\" />
   </ItemGroup>
 </Project>
