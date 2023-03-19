@@ -1,0 +1,69 @@
+﻿@model Reference
+
+
+<form method="post" asp-action="DeleteReference">
+    <input asp-for="Id" hidden />
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary"> Edit a Reference</h2>
+            <hr />
+
+        </div>
+        <div asp-validation-summary="All"></div>
+        <div class="mb-3">
+            <label asp-for="Language"></label>
+            <select asp-for="Language" class="form-select" disabled>
+                <option value="default">Select from the dropdown:</option>
+                <option value="C#">C#</option>
+                <option value="Python">Python</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="PHP">PHP</option>
+                <option value="Java">Java</option>
+                <option value="Rust">Rust</option>
+                <option value="SQL">SQL</option>
+                <option value="Pandas">Python- Pandas</option>
+            </select>
+            <span asp-validation-for="Language" class="text-danger"></span>
+
+        </div>
+        <div class="mb-3">
+            <label asp-for="Link"></label>
+            <input asp-for="Link" class="form-control" disabled/>
+            <span asp-validation-for="Link" class="text-danger"></span>
+
+        </div>
+        <div class="mb-3">
+            <label asp-for="Keyphrase"></label>
+            <input asp-for="Keyphrase" class="form-control" disabled />
+            <span asp-validation-for="Keyphrase" class="text-danger"></span>
+
+        </div>
+        <div class="mb-3">
+            <label asp-for="ProjectName"></label>
+            <input asp-for="ProjectName" class="form-control" disabled/>
+            <span asp-validation-for="ProjectName" class="text-danger"></span>
+
+        </div>
+        <div class="mb-3">
+            <label>Delete Code</label>
+            <input type="text" name="passcode" required class="form-control" />
+
+
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:150px">
+            Delete
+        </button>
+        <a class="btn btn-secondary" asp-controller="Reference" asp-action="Index" style="width:150px">
+            Back to List
+        </a>
+    </div>
+</form>
+
+
+
+@section Scripts{
+    @{
+
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

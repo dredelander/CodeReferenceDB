@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "CR2 -Home Page";
 }
 
 <div class="text-center">
@@ -10,19 +10,32 @@
     <p class="mb-2">
         You have landed at the ultimate web app for organizing and saving your code reference links!
 
-        As a software developer or casual coder, you know how important it is to have fast access code resources, especially the ones you have used before and likely will use again. CR2 is a web app I created as the final project for my software development course, and I'm excited to share it with you. With a sleek and intuitive interface, CR2 makes it easy to add, edit, and delete links.
-        Since there are no sign-in options, all users share the same database of reference links. </p>
-    <p class="mb-2"> This means that you don't need to worry about creating an account or logging in - simply access CR2 from any device and start organizing your code resources right away.
+        As a software developer or casual coder, you know how important it is to have fast access code resources, especially the ones you have used before and likely will use again. CR2 is a web app I created as the final project for my software development course, and I'm excited to share it with you. With a sleek and intuitive interface, CR2 makes it easy to add and update code helps links.
+        Currently there are no sign-in options, all users have access to the base repository. </p>
+    <p class="mb-2">
+        This means that you don't need to worry about creating an account or logging in.
 
-        CR2 also allows you to search for links based on keyphrases and project names, so you can quickly find the resources you need. 
+        CR2 also allows you to search for links based on keyphrases and project names, so you can quickly find the resources you need.
+        I would love to have fellow developers add to this repo, to contribute -simply request a developer token.
 
         I hope you enjoy using CR2 as much as I enjoyed creating it.
-        Start contribution with your code reference links today!
+
     </p>
 
 </div>
-<div class="text-center">
+<div class="text-center mt-4">
+    <p class="text-info mb-3" style="font-weight:bolder">
+        To request a developer token, please email the admin.
+        </p>
+    <p class="mt-2 text-success">
+        <a href="mailto:andres@landercentral.com"
+        <i class="bi bi-envelope-at-fill ms-2"></i> andres@landercentral.com
+        </a>
+    </p>
+
+</div>
+<div class="text-center ">
    
-    <p>Lets get <a asp-area="" asp-controller="Reference" asp-action="Index"> started!</a>.</p>
+    <p>Lets get <a asp-area="" asp-controller="Reference" asp-action="Index" class="text-danger"> started!</a>.</p>
 </div>
 

@@ -10,6 +10,9 @@ builder.Services.AddDbContext<ApplicationDBContext>(options => options.UseNpgsql
     builder.Configuration.GetConnectionString("DefaultConnection")
     ));
 
+var CRUDCode = builder.Configuration["Secrets:CRUDcode"];
+var DELETECode = builder.Configuration["Secrets:DELETEcode"];
+
 builder.Services.AddRazorPages();
 
 var app = builder.Build();

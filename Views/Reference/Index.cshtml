@@ -1,12 +1,14 @@
 ﻿@model IEnumerable<Reference>
 @{
 
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "CR2 - List";
 }
+
+
 
 <div class="row pt-4">
     <div class="col-6 text-start">
-        <a asp-controller="" asp-action="" class="btn btn-danger">
+        <a asp-controller="Reference" asp-action="Create" class="btn btn-danger">
             <i class="bi bi-plus-circle"></i> &nbsp Add a Reference Record
         </a>
     </div>
@@ -22,9 +24,6 @@
             <h2 class="text-info text-center" style="font-weight:bolder">Reference List</h2>
         </div>
         <div class="col-6 text-end">
-            @*<a asp-controller="Category" asp-action="Create" class="btn btn-primary">
-                    <i class="bi bi-plus-circle"></i> &nbsp Create a Category
-                </a>*@
         </div>
     </div>
 
@@ -34,16 +33,16 @@
     <table class="table table-bordered table-striped" style="width:100%">
         <thead>
             <tr>
-                <th>
+                <th class="text-center">
                     Language
                 </th>
-                <th>
+                <th class="text-center">
                     Keyphrase
                 </th>
-                <th>
+                <th class="text-center">
                     Project Name
                 </th>
-                <th>
+                <th class="text-center">
                     Link
                 </th>
                 <th></th>
@@ -63,8 +62,8 @@
                     <td width="30%">
                         @obj.ProjectName
                     </td>
-                    <td width="10%">
-                        <a href="@obj.Link">
+                    <td width="10%" class="text-center">
+                        <a href="@obj.Link" target=“_blank” >
                             <button class="btn btn-success">
                                 Link
 
@@ -72,21 +71,20 @@
                         </a>
 
                     </td>
-                    <td width="10%">
+                    <td width="10%" class="text-center">
                         <div class=" w-75 btn-group" role="group">
-                            <a @*asp-controller="Category" asp-action="Edit" asp-route-id="@obj.Id"*@>
+                            <a asp-controller="Reference" asp-action="Edit" asp-route-id="@obj.Id">
                                 <button class="btn btn-info">
-                                    Edit
+                                   <i class="bi bi-pencil-square"></i> Edit
                                 </button>
                             </a>
                         </div>
                     </td>
-                    <td>
+                    <td class="text-center">
                         <div class="w-75 btn-group danger" role="group">
-                            <a @*asp-controller="Category" asp-action="Delete" asp-route-id="@obj.Id"*@>
+                            <a asp-controller="Reference" asp-action="Delete" asp-route-id="@obj.Id">
                                 <button class="btn btn-warning">
-
-                                    Delete
+                                    <i class="bi bi-trash3"></i>
                                 </button>
                             </a>
                         </div>

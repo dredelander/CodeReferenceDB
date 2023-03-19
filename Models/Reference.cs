@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace CodeHelpRepoWebApp.Models
 {
@@ -12,13 +13,15 @@ namespace CodeHelpRepoWebApp.Models
         [Required]
 		public string Language { get; set; }
         [Required]
+        [UrlAttribute()]
 		public string Link { get; set; }
         [Required]
 		public string Keyphrase { get; set; }
         [Required]
+        [DisplayName("Project Name")]
         public string ProjectName { get; set; }
 
-        public DateTime CreatedDateTime { get; set; } = DateTime.Now;
+        public DateTime CreatedDateTime { get; set; } = DateTime.Now.ToUniversalTime();
 
         public Reference()
         {
