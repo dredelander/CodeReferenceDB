@@ -19,6 +19,11 @@ namespace CodeHelpRepoWebApp.Controllers
         {
             _db = db;
         }
+
+        public IActionResult EmptyKeyword()
+        {
+            return View();
+        }
         // GET: /<controller>/
         public IActionResult Index(string keyword)
         {
@@ -29,7 +34,7 @@ namespace CodeHelpRepoWebApp.Controllers
                 return View(objSearchList);
             }
 
-            return View();
+            return RedirectToAction("EmptyKeyword");
         }
     }
 }
