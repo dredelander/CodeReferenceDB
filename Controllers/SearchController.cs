@@ -29,8 +29,8 @@ namespace CodeHelpRepoWebApp.Controllers
         {
             if(!String.IsNullOrEmpty(keyword))
             {
-                IEnumerable<Reference> objSearchList = _db.References.Where(r => r.Keyphrase.Contains(keyword)
-                    || r.ProjectName.Contains(keyword) || r.Language.Contains(keyword));
+                IEnumerable<Reference> objSearchList = _db.References.Where(r => r.Keyphrase.ToLower().Contains(keyword.ToLower())
+                    || r.ProjectName.ToLower().Contains(keyword.ToLower()) || r.Language.ToLower().Contains(keyword.ToLower()));
                 return View(objSearchList);
             }
 
